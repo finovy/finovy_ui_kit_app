@@ -27,7 +27,7 @@ fn_ui_kit:
 |    **Third-Party Dependencies**     | [auto_size_text](https://pub.dev/packages/auto_size_text)  [pin_code_fields](https://pub.dev/packages/pin_code_fields)   [pull_to _refesh](https://pub.dev/packages/pull_to_refresh)  [visibility_detector](https://pub.dev/packages/visibility_detector) |
 |     **Open Source Repository**      |         https://github.com/finovy/finovy_ui_kit.git          |
 
-## **三、相关截图**
+## **三、screenshots**
 <div style="display:inline-block">
 <img src="screenshot/pic001.png" alt="all" width="375">
 <img src="screenshot/pic002.png" alt="button" width="375"><br>

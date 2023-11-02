@@ -72,9 +72,9 @@ class ToastPage extends StatelessWidget {
                   onTap: () => {
                         FNUIToast.show(
                           text: '左侧带icon展示',
-                          preIcon: const Icon(
-                            Icons.privacy_tip_outlined,
-                            size: 20,
+                          preIcon: FNUIIcon(
+                            iconName: FNIcons.iconBaseFailed,
+                            color: FNColors.iconDanger,
                           ),
                         )
                       }),
@@ -82,9 +82,9 @@ class ToastPage extends StatelessWidget {
             const CodeHighlightCard(
               code: '''FNUIToast.show(
                           text: '左侧带icon展示',
-                          preIcon: const Icon(
-                            Icons.privacy_tip_outlined,
-                            size: 20,
+                          preIcon: FNUIIcon(
+                            iconName: FNIcons.iconBaseFailed,
+                            color: FNColors.iconDanger,
                           ),
                         )''',
             ),
@@ -96,9 +96,9 @@ class ToastPage extends StatelessWidget {
                         FNUIToast.show(
                           text: '左侧带icon展示',
                           align: ToastAlign.top,
-                          preIcon: const Icon(
-                            Icons.check,
-                            size: 20,
+                          preIcon: FNUIIcon(
+                            iconName: FNIcons.iconBaseSuccess,
+                            color: FNColors.iconSuccess,
                           ),
                         )
                       }),
@@ -107,9 +107,9 @@ class ToastPage extends StatelessWidget {
               code: '''FNUIToast.show(
                           text: '左侧带icon展示',
                           align: ToastAlign.top,
-                          preIcon: const Icon(
-                            Icons.check,
-                            size: 20,
+                          preIcon: FNUIIcon(
+                            iconName: FNIcons.iconBaseSuccess,
+                            color: FNColors.iconSuccess,
                           ),
                         )''',
             ),

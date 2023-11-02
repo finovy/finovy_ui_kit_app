@@ -19,8 +19,6 @@ class PickerPage extends StatelessWidget {
         child: ListView(
           children: [
             FNUIButton(
-              // buttonType: ButtonType.main,
-              status: ButtonStatus.available,
               text: '时间选择器 YYYY-MM-DD',
               // margin: const EdgeInsets.all(8),
               onTap: () => FNUIDatePicker.show(
@@ -50,8 +48,6 @@ class PickerPage extends StatelessWidget {
               height: 12,
             ),
             FNUIButton(
-              // buttonType: ButtonType.main,
-              status: ButtonStatus.available,
               text: '时间选择器(24H) HH:mm',
               // margin: const EdgeInsets.all(8),
               onTap: () => FNUIDatePicker.show(
@@ -91,8 +87,6 @@ class PickerPage extends StatelessWidget {
               height: 12,
             ),
             FNUIButton(
-              // buttonType: ButtonType.main,
-              status: ButtonStatus.available,
               text: '时间选择器 week:am/pm',
               // margin: const EdgeInsets.all(8),
               onTap: () => FNUIDatePicker.show(

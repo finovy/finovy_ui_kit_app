@@ -19,7 +19,7 @@ class AppbarPage extends StatelessWidget {
             FNUIAppbar(
               leftWidget: Icon(Icons.arrow_back_ios_new),
               rightWidget: Icon(Icons.settings),
-              backgroundColor: FNColors.mainRed,
+              backgroundColor: FNColors.white,
               titleWidget: FNUIText(
                 text: 'App title',
               ),
@@ -28,7 +28,7 @@ class AppbarPage extends StatelessWidget {
               code: '''FNUIAppbar(
               leftWidget: Icon(Icons.arrow_back_ios_new),
               rightWidget: Icon(Icons.settings),
-              backgroundColor: FNColors.mainRed,
+              backgroundColor: FNColors.white,
               titleWidget: FNUIText(
                 text: 'App title',
               ),

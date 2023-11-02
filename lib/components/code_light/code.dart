@@ -35,7 +35,7 @@ class _CodeHighlightCardState extends State<CodeHighlightCard> {
   @override
   Widget build(BuildContext context) {
     return ExpansionCard(
-      cardDecoration: BoxDecoration(color: FNColors.line),
+      cardDecoration: BoxDecoration(color: FNColors.lineColor),
       isExpanded: widget.isExpanded ?? false,
       tlText: '示例代码',
       trText: '代码拷贝',
@@ -55,14 +55,17 @@ class _CodeHighlightCardState extends State<CodeHighlightCard> {
       ),
       onTap: (isExpanded) => debugPrint('button.....$isExpanded'),
       contentWidget: <Widget>[
-        SyntaxView(
-          code: widget.code,
-          syntax: Syntax.DART,
-          syntaxTheme: SyntaxTheme.vscodeDark(),
-          fontSize: 12.0,
-          withZoom: false,
-          withLinesCount: true,
-          expanded: false,
+        FittedBox(
+          alignment: Alignment.topLeft,
+          child: SyntaxView(
+            code: widget.code,
+            syntax: Syntax.DART,
+            syntaxTheme: SyntaxTheme.vscodeDark(),
+            fontSize: 12.0,
+            withZoom: false,
+            withLinesCount: true,
+            expanded: false,
+          ),
         )
       ],
     );

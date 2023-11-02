@@ -42,7 +42,9 @@ class PlaceHolderPage extends StatelessWidget {
               buttonTitle: '点击重试',
             )''',
             ),
-            const FNUIEmptyWidgetConfigure(
+            FNUIEmptyWidget(
+              state: EmptyWidgetState.noSearchResult,
+              title: '没有搜索结果',
               optionWidget: SizedBox(
                 height: 40,
                 child: Row(
@@ -63,10 +65,6 @@ class PlaceHolderPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-              child: FNUIEmptyWidget(
-                state: EmptyWidgetState.noSearchResult,
-                title: '没有搜索结果',
               ),
             ),
             const CodeHighlightCard(

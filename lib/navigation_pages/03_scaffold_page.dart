@@ -12,24 +12,19 @@ class ScaffoldPage extends StatelessWidget {
     return FNUIScaffold(
       leftCallback: () => Navigator.pop(context),
       rightWidget: Icon(Icons.settings),
-      backgroundColor: FNColors.mainRed,
-      titleWidget: FNUIText(
-        text: 'Scaffold Page',
-      ),
+      title: 'Scaffold Page',
       child: Container(
-        color: FNColors.mainGreen,
+        color: FNColors.green,
         child: Column(
           children: [
             const CodeHighlightCard(
               code: '''FNUIScaffold(
       leftWidget: Icon(Icons.arrow_back_ios_new),
       rightWidget: Icon(Icons.settings),
-      backgroundColor: FNColors.mainRed,
-      titleWidget: FNUIText(
-        text: 'Scaffold Page',
-      ),
+      backgroundColor: FNColors.red,
+      title: 'Scaffold Page',
       child: Container(
-        color: FNColors.mainGreen,
+        color: FNColors.green,
         child: Column(
           children: [
           ],

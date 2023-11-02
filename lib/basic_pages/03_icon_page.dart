@@ -19,12 +19,19 @@ class IconPage extends StatelessWidget {
           text: 'icon按钮',
           padding: EdgeInsets.all(8),
         ),
-        const FNUIButton(
-          buttonType: ButtonType.main,
-          status: ButtonStatus.available,
-          icon: Icon(Icons.add),
-          text: 'icon主要按钮',
-          margin: EdgeInsets.all(8),
+        Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIIcon.name(
+              Icons.chat,
+              size: 32.0,
+            ),
+            FNUIIcon.url(
+              'https://b.yzcdn.cn/vant/icon-demo-1126.png',
+              size: 32.0,
+            ),
+          ],
         ),
         const CodeHighlightCard(
           code: '''// 按钮创建示例 类型：ButtonType.main 状态:ButtonStatus.available
@@ -36,19 +43,226 @@ FNUIButton(
           margin: EdgeInsets.all(8),
         )''',
         ),
-        const FNUIButton(
-          buttonType: ButtonType.second,
-          status: ButtonStatus.available,
-          icon: Icon(Icons.add),
-          text: 'icon次要按钮',
-          margin: EdgeInsets.all(8),
+        Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIIcon.name(
+              Icons.chat,
+              color: Colors.blue,
+              size: 32.0,
+            ),
+            FNUIIcon.name(
+              Icons.chat,
+              color: Colors.green,
+              size: 32.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSuccess,
+              color: FNColors.green,
+              size: 32.0,
+            )
+          ],
         ),
-        const FNUIButton(
-          buttonType: ButtonType.text,
-          status: ButtonStatus.available,
-          icon: Icon(Icons.add),
-          text: 'icon文字按钮',
-          margin: EdgeInsets.all(8),
+        Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIIcon.name(
+              FNIcons.iconBaseBack,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseUnfold,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseFold,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseToTop,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseToBottom,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseDrag,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseHelp,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseCopy,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseDownload,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSearch,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseAdd,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseFiltter,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEdit,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEmal,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseMessage,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSetting,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEyeoPen,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEyeHide,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseNotice,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseShare,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSort,
+              size: 18.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseService,
+              size: 18.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseLanguage,
+              size: 18.0,
+              color: FNColors.primary,
+            ),
+          ],
+        ),
+        const CodeHighlightCard(
+          code: '''Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIIcon.name(
+              FNIcons.iconBaseBack,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseUnfold,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseFold,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseToTop,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseToBottom,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseDrag,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseHelp,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseCopy,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseDownload,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSearch,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseAdd,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseFiltter,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEdit,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEmal,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseMessage,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSetting,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEyeoPen,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseEyeHide,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseNotice,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseShare,
+              size: 24.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseSort,
+              size: 18.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseService,
+              size: 18.0,
+            ),
+            FNUIIcon.name(
+              FNIcons.iconBaseLanguage,
+              size: 18.0,
+              color: FNColors.primary,
+            ),
+          ],
+        )''',
         ),
       ]),
     );

@@ -4,6 +4,7 @@ import './_modals.dart';
 import '../navigation_pages/01_appbar_page.dart' deferred as app_bar_page;
 import '../navigation_pages/02_backbtn_page.dart' deferred as back_btn_page;
 import '../navigation_pages/03_scaffold_page.dart' deferred as scaffold_page;
+import '../navigation_pages/04_grid_page.dart' deferred as grid_page;
 
 List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
@@ -23,5 +24,11 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
     path: '/scaffold',
     future: () => scaffold_page.loadLibrary(),
     component: (BuildContext context) => scaffold_page.ScaffoldPage(),
+  ),
+  CompRoute(
+    name: 'Grid',
+    path: '/grid',
+    future: () => grid_page.loadLibrary(),
+    component: (BuildContext context) => grid_page.GridPage(),
   ),
 ];

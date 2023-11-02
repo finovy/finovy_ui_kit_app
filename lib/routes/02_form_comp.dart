@@ -11,7 +11,6 @@ import '../form_pages/04_radio_page.dart' deferred as radio_page;
 import '../form_pages/05_rate_page.dart' deferred as rate_page;
 import '../form_pages/06_search_page.dart' deferred as search_page;
 import '../form_pages/07_segment_page.dart' deferred as segment_page;
-import '../form_pages/08_table_page.dart' deferred as table_page;
 
 List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
@@ -55,11 +54,5 @@ List<CompRoute> formCompRoutes = <CompRoute>[
     path: '/segment',
     future: () => segment_page.loadLibrary(),
     component: (BuildContext context) => segment_page.SegmentPage(),
-  ),
-  CompRoute(
-    name: 'Table',
-    path: '/table',
-    future: () => table_page.loadLibrary(),
-    component: (BuildContext context) => table_page.TablePage(),
   ),
 ];

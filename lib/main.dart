@@ -7,8 +7,6 @@ import './components/main.dart';
 import './routes/main.dart';
 import 'doc_mixin.dart' if (dart.library.html) 'web/doc_mixin.dart';
 
-// import 'configure.dart' if (dart.library.html) 'web/configure.dart';
-
 const Size kIphone6 = Size(375, 667);
 const BoxConstraints kMaxConstraints = BoxConstraints(
   maxWidth: 375,
@@ -53,27 +51,35 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          onGenerateTitle: (BuildContext context) => tr('App.title'),
-          localizationsDelegates: context.localizationDelegates,
-          //   ..add(FlanS.delegate),
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          theme: ThemeData(
-            primaryColor: Colors.white,
-            appBarTheme: const AppBarTheme(
-              elevation: 0.0,
+        return FNTheme(
+          data: FNThemeData(),
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            onGenerateTitle: (BuildContext context) => tr('App.title'),
+            localizationsDelegates: context.localizationDelegates,
+            //   ..add(FlanS.delegate),
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
+            theme: ThemeData(
+              primaryColor: FNColors.primary,
+
+              appBarTheme: AppBarTheme(
+                elevation: 0.0,
+                foregroundColor: FNColors.textColor,
+                color: FNColors.background,
+                titleTextStyle: FNColors.textAppbarStyle,
+              ),
+              scaffoldBackgroundColor: Colors.white,
+              // primarySwatch: Colors.blue,
+              visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            scaffoldBackgroundColor: Colors.white,
-            primarySwatch: Colors.blue,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
+            home: child,
+            onUnknownRoute: (RouteSettings settings) =>
+                CompRouter.fallbackRoute,
+            onGenerateRoute: CompRouter.onGenerateRoute,
+            builder: (context, child) => FNDesignContext.fnUIKitContextBuilder(
+                context: context, child: child!),
           ),
-          home: child,
-          onUnknownRoute: (RouteSettings settings) => CompRouter.fallbackRoute,
-          onGenerateRoute: CompRouter.onGenerateRoute,
-          builder: (context, child) => FNDesignContext.fnUIKitContextBuilder(
-              context: context, child: child!),
         );
       },
       child: const MyHomePage(),
@@ -89,7 +95,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: FNColors.card,
+        backgroundColor: FNColors.background,
       ),
       body: SafeArea(
         child: ListView(

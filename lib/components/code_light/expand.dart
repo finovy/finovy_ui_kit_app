@@ -47,7 +47,7 @@ class _ExpansionCardState extends State<ExpansionCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: widget.margin ?? const EdgeInsets.all(10),
+      margin: widget.margin ?? const EdgeInsets.symmetric(vertical: 10.0),
       padding: const EdgeInsets.all(10),
       decoration: widget.cardDecoration ??
           const BoxDecoration(
@@ -75,7 +75,7 @@ class _ExpansionCardState extends State<ExpansionCard> {
                         widget.tlText ?? "",
                         style: widget.tlStyle ??
                             const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                       ),
                   Row(
                     children: <Widget>[

@@ -29,7 +29,7 @@ class VerifyCodePage extends StatelessWidget {
               const FNUIText(text: "默认样式（重构后）"),
               FNUIVerifyCodeInput(
                 length: 6,
-                cursorColor: FNColors.mainColor,
+                cursorColor: FNColors.primary,
                 pinTheme: PinTheme(
                     shape: PinCodeFieldShape.underline,
                     borderRadius: BorderRadius.circular(0),
@@ -44,7 +44,7 @@ class VerifyCodePage extends StatelessWidget {
               const CodeHighlightCard(
                 code: '''FNUIVerifyCodeInput(
                 length: 6,
-                cursorColor: FNColors.mainColor,
+                cursorColor: FNColors.primary,
                 pinTheme: PinTheme(
                     shape: PinCodeFieldShape.underline,
                     borderRadius: BorderRadius.circular(0),
@@ -66,7 +66,7 @@ class VerifyCodePage extends StatelessWidget {
               ),
               FNUIVerifyCodeInput(
                 length: 6,
-                cursorColor: FNColors.mainColor,
+                cursorColor: FNColors.primary,
                 keyboardType: TextInputType.number,
                 controller: textEditingController,
                 errorAnimationController: errorController,
@@ -79,7 +79,7 @@ class VerifyCodePage extends StatelessWidget {
                     fieldHeight: 40,
                     fieldWidth: 40,
                     borderWidth: 1,
-                    activeColor: FNColors.mainColor,
+                    activeColor: FNColors.primary,
                     selectedFillColor: Colors.white,
                     activeFillColor: Colors.white,
                     inactiveFillColor: Colors.white),
@@ -93,7 +93,7 @@ class VerifyCodePage extends StatelessWidget {
               const CodeHighlightCard(
                 code: '''FNUIVerifyCodeInput(
                 length: 6,
-                cursorColor: FNColors.mainColor,
+                cursorColor: FNColors.primary,
                 keyboardType: TextInputType.number,
                 controller: textEditingController,
                 errorAnimationController: errorController,
@@ -106,7 +106,7 @@ class VerifyCodePage extends StatelessWidget {
                     fieldHeight: 40,
                     fieldWidth: 40,
                     borderWidth: 1,
-                    activeColor: FNColors.mainColor,
+                    activeColor: FNColors.primary,
                     selectedFillColor: Colors.white,
                     activeFillColor: Colors.white,
                     inactiveFillColor: Colors.white),

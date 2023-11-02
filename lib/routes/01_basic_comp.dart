@@ -7,7 +7,7 @@ import '../basic_pages/02_text_page.dart' deferred as text_page;
 import '../basic_pages/03_icon_page.dart' deferred as icon_page;
 import '../basic_pages/04_image_page.dart' deferred as image_page;
 import '../basic_pages/05_input_page.dart' deferred as input_page;
-// import '../basic_pages/06_popup_page.dart' deferred as popup_page;
+import '../basic_pages/06_tag_page.dart' deferred as tag_page;
 // import '../basic_pages/07_style_page.dart' deferred as style_page;
 // import '../basic_pages/08_toast_page.dart' deferred as toast_page;
 
@@ -45,12 +45,12 @@ List<CompRoute> basicCompRoutes = <CompRoute>[
     future: () => input_page.loadLibrary(),
     component: (BuildContext context) => input_page.InputPage(),
   ),
-  // CompRoute(
-  //   name: 'Popup',
-  //   path: '/popup',
-  //   future: () => popup_page.loadLibrary(),
-  //   component: (BuildContext context) => popup_page.PopupPage(),
-  // ),
+  CompRoute(
+    name: 'Tag',
+    path: '/tag',
+    future: () => tag_page.loadLibrary(),
+    component: (BuildContext context) => tag_page.TagPage(),
+  ),
   // CompRoute(
   //   name: 'Style',
   //   path: '/style',

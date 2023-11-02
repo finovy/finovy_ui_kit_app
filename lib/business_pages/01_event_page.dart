@@ -20,25 +20,25 @@ class EventContainer extends StatelessWidget {
               // width: 200,
               alignment: Alignment.center,
 
-              color: FNColors.mainRed,
+              color: FNColors.red,
               onTap: () => FNUIToast.show(
                   text: 'Event Container clicked', align: ToastAlign.top),
               child: Container(
                 margin: EdgeInsets.only(left: 20, right: 20, top: 20),
                 height: 60,
-                color: FNColors.mainGreen,
+                color: FNColors.green,
               ),
             ),
             const CodeHighlightCard(
               code: '''FNUIEventContainer(
               alignment: Alignment.center,
 
-              color: FNColors.mainRed,
+              color: FNColors.red,
               onTap: () => {print("Event Container clicked")},
               child: Container(
                 margin: EdgeInsets.only(left: 20, right: 20, top: 20),
                 height: 60,
-                color: FNColors.mainGreen,
+                color: FNColors.green,
               ),
             )''',
             ),

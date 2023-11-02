@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class FlanActiveResponse extends StatefulWidget {
-  const FlanActiveResponse({
+class FNActiveResponse extends StatefulWidget {
+  const FNActiveResponse({
     Key? key,
     this.disabled = false,
     this.enable = true,
@@ -21,10 +21,10 @@ class FlanActiveResponse extends StatefulWidget {
   final Widget? child;
 
   @override
-  _FlanActiveResponseState createState() => _FlanActiveResponseState();
+  _FNActiveResponseState createState() => _FNActiveResponseState();
 }
 
-class _FlanActiveResponseState extends State<FlanActiveResponse> {
+class _FNActiveResponseState extends State<FNActiveResponse> {
   bool _active = false;
 
   void setActive(bool active) {

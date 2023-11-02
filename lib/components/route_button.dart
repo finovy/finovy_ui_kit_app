@@ -45,7 +45,7 @@ class RouteButton extends StatelessWidget {
           fontWeight: FontWeight.w600,
           color: const Color(0xFF323233),
         ),
-        child: FlanActiveResponse(
+        child: FNActiveResponse(
           builder: (BuildContext contenxt, bool active, Widget? child) {
             return DecoratedBox(
               decoration: BoxDecoration(

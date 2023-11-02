@@ -105,7 +105,7 @@ SMUIDialogManager.showSingleButtonDialog(context,
                       context,
                       showIcon: true,
                       iconWidget: Image.asset(
-                        'icon_common_success_tips.png',
+                        'lib/assets/images/icon_checkbox_checked.png',
                         width: 20.0,
                         height: 20.0,
                         package: 'fn_ui_kit',
@@ -121,14 +121,14 @@ SMUIDialogManager.showSingleButtonDialog(context,
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showConfirmDialog(
+  FNUIDialogManager.showConfirmDialog(
                       context,
                       showIcon: true,
                       iconWidget: Image.asset(
-                        KImagePath.commonSuccessTips,
+                        'lib/assets/images/icon_checkbox_checked.png',
                         width: 20.0,
                         height: 20.0,
-                        // package: baseLib,
+                        package: 'fn_ui_kit',
                       ),
                       title: "标题内容",
                       confirm: "确定",
@@ -397,10 +397,10 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
                 contentPadding: widget.keyboardType == BaseKeyBoardType.password
                     ? EdgeInsets.zero
                     : const EdgeInsets.only(bottom: 10),
-                textStyle: TextStyle(color: FNColors.fontMain, fontSize: 16),
+                textStyle: TextStyle(color: FNColors.textColor, fontSize: 16),
                 hintText: widget.hint,
                 hintStyle: TextStyle(
-                  color: FNColors.fontTips,
+                  color: FNColors.textTipColor,
                   fontSize: 16,
                 ),
                 keyboardType: widget.keyboardType,
@@ -417,7 +417,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
               decoration: BoxDecoration(
                 border: Border(
                   bottom: BorderSide(
-                    color: _showError ? FNColors.mainRed : FNColors.line,
+                    color: _showError ? FNColors.red : FNColors.lineColor,
                     width: 0.5,
                   ),
                 ),
@@ -427,7 +427,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
               visible: (widget.errorText != null && _showError),
               child: FNUIText(
                 margin: const EdgeInsets.only(top: 8),
-                color: FNColors.mainRed,
+                color: FNColors.red,
                 text: widget.errorText ?? '',
                 alignment: Alignment.centerLeft,
                 fontSize: 12,
@@ -440,7 +440,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
           decoration: BoxDecoration(
             border: Border(
               bottom: BorderSide(
-                color: FNColors.line,
+                color: FNColors.lineColor,
                 width: 0.5,
               ),
             ),
@@ -458,7 +458,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
       return Text(
         widget.title ?? "",
         style: TextStyle(
-          color: FNColors.fontMain,
+          color: FNColors.textColor,
           fontWeight: FontWeight.w500,
           fontSize: 18,
         ),
@@ -507,7 +507,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
                   ? BoxDecoration(
                       border: Border(
                         right: BorderSide(
-                          color: FNColors.line,
+                          color: FNColors.lineColor,
                           width: 0.5,
                         ),
                       ),
@@ -516,7 +516,9 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
               child: Text(
                 res,
                 style: TextStyle(
-                  color: index == 0 ? FNColors.fontNormal : FNColors.mainColor,
+                  color: index == 0
+                      ? FNColors.textSecondaryColor
+                      : FNColors.primary,
                   fontSize: 18,
                   fontWeight: index == 0 ? FontWeight.normal : FontWeight.w500,
                 ),
@@ -542,7 +544,7 @@ class _CenterInputDialogState extends State<FNCenterInputDialog> {
       return FNUIText(
         text: widget.message ?? '',
         fontSize: 10,
-        color: FNColors.fontMain,
+        color: FNColors.textColor,
         padding: const EdgeInsets.only(
           top: 4,
         ),

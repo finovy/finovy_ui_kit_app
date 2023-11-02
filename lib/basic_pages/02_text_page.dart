@@ -11,7 +11,7 @@ class TextPage extends StatelessWidget {
     MaterialStatesController statesController = MaterialStatesController();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('button测试'),
+        title: const Text('Text测试'),
         centerTitle: true,
       ),
       body: ListView(children: [

@@ -8,7 +8,6 @@ class TextPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MaterialStatesController statesController = MaterialStatesController();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Text测试'),
@@ -16,13 +15,26 @@ class TextPage extends StatelessWidget {
       ),
       body: ListView(children: [
         const FNUIText(
-          text: '文本展示demo文本展示demo文本展示demo',
+          text:
+              '自动换行：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo',
           padding: EdgeInsets.all(8),
         ),
         const CodeHighlightCard(
           code: '''FNUIText(
-          text: '文本展示demo文本展示demo文本展示demo',
+          text: '自动换行：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo',
           padding: EdgeInsets.all(8),
+        )''',
+        ),
+        const FNUIText(
+          text: '限制行数：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo',
+          padding: EdgeInsets.all(8),
+          maxLines: 2,
+        ),
+        const CodeHighlightCard(
+          code: '''FNUIText(
+          text: '限制行数：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo',
+          padding: EdgeInsets.all(8),
+          maxLines: 2,
         )''',
         ),
       ]),

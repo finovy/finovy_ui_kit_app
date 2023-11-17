@@ -28,19 +28,15 @@ class ButtonPage extends StatelessWidget {
             ),
             FNUIButton(
               text: ('次要按钮'),
-              type: FNButtonType.normal,
+              type: FNButtonType.secondary,
             ),
             FNUIButton(
-              text: ('成功按钮'),
-              type: FNButtonType.success,
+              text: ('线框按钮'),
+              type: FNButtonType.hollowed,
             ),
             FNUIButton(
-              text: ('错误按钮'),
-              type: FNButtonType.danger,
-            ),
-            FNUIButton(
-              text: ('警示按钮'),
-              type: FNButtonType.warning,
+              text: ('文字按钮'),
+              type: FNButtonType.text,
             ),
           ],
         ),
@@ -56,19 +52,15 @@ class ButtonPage extends StatelessWidget {
             ),
             FNUIButton(
               text: ('次要按钮'),
-              type: FNButtonType.normal,
+              type: FNButtonType.secondary,
             ),
             FNUIButton(
-              text: ('成功按钮'),
-              type: FNButtonType.success,
+              text: ('线框按钮'),
+              type: FNButtonType.hollowed,
             ),
             FNUIButton(
-              text: ('错误按钮'),
-              type: FNButtonType.danger,
-            ),
-            FNUIButton(
-              text: ('警示按钮'),
-              type: FNButtonType.warning,
+              text: ('文字按钮'),
+              type: FNButtonType.text,
             ),
           ],
         )''',
@@ -83,30 +75,62 @@ class ButtonPage extends StatelessWidget {
           children: <Widget>[
             FNUIButton(
               text: ('主要按钮'),
+              loadingText: '加载中',
               type: FNButtonType.primary,
               status: ButtonStatus.loading,
             ),
             FNUIButton(
               text: ('次要按钮'),
-              type: FNButtonType.normal,
+              loadingText: '加载中',
+              type: FNButtonType.secondary,
               status: ButtonStatus.loading,
             ),
             FNUIButton(
-              text: ('成功按钮'),
-              type: FNButtonType.success,
+              text: ('线框按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.hollowed,
               status: ButtonStatus.loading,
             ),
             FNUIButton(
-              text: ('错误按钮'),
-              type: FNButtonType.danger,
-              status: ButtonStatus.loading,
-            ),
-            FNUIButton(
-              text: ('警示按钮'),
-              type: FNButtonType.warning,
+              text: ('文字按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.text,
               status: ButtonStatus.loading,
             ),
           ],
+        ),
+        const CodeHighlightCard(
+          code: '''
+          Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIButton(
+              text: ('主要按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.primary,
+              status: ButtonStatus.loading,
+            ),
+            FNUIButton(
+              text: ('次要按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.secondary,
+              status: ButtonStatus.loading,
+            ),
+            FNUIButton(
+              text: ('线框按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.hollowed,
+              status: ButtonStatus.loading,
+            ),
+            FNUIButton(
+              text: ('文字按钮'),
+              loadingText: '加载中',
+              type: FNButtonType.text,
+              status: ButtonStatus.loading,
+            ),
+          ],
+        )''',
         ),
         const FNUIText(
           text: '禁用状态',
@@ -121,156 +145,79 @@ class ButtonPage extends StatelessWidget {
           FNUIButton(
             status: ButtonStatus.unavailable,
             text: ('次要按钮'),
-            type: FNButtonType.normal,
+            type: FNButtonType.secondary,
+          ),
+          FNUIButton(
+            status: ButtonStatus.unavailable,
+            text: ('线框按钮'),
+            type: FNButtonType.hollowed,
+          ),
+          FNUIButton(
+            status: ButtonStatus.unavailable,
+            text: ('文字按钮'),
+            type: FNButtonType.text,
           ),
         ]),
         const CodeHighlightCard(
           code: '''
           Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
           FNUIButton(
-            disabled: true,
+            status: ButtonStatus.unavailable,
             text: ('主要按钮'),
             type: FNButtonType.primary,
           ),
           FNUIButton(
-            disabled: true,
+            status: ButtonStatus.unavailable,
             text: ('次要按钮'),
-            type: FNButtonType.normal,
+            type: FNButtonType.secondary,
+          ),
+          FNUIButton(
+            status: ButtonStatus.unavailable,
+            text: ('线框按钮'),
+            type: FNButtonType.hollowed,
+          ),
+          FNUIButton(
+            status: ButtonStatus.unavailable,
+            text: ('文字按钮'),
+            type: FNButtonType.text,
           ),
         ])''',
         ),
         const FNUIText(
-          text: '线框按钮',
+          text: '自定义icon按钮',
           padding: EdgeInsets.all(8),
         ),
-        Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            border: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            border: true,
-            text: ('次要按钮'),
-            type: FNButtonType.normal,
-          ),
-        ]),
-        const CodeHighlightCard(
-          code: '''
-          Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            text: ('次要按钮'),
-            type: FNButtonType.normal,
-          ),
-        ])''',
-        ),
-        const FNUIText(
-          text: '文字按钮',
-          padding: EdgeInsets.all(8),
-        ),
-        Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            border: false,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            border: false,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.success,
-          ),
-        ]),
-        const CodeHighlightCard(
-          code: '''
-          Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            border: false,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            border: false,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.success,
-          ),
-        ])''',
-        ),
-        const FNUIText(
-          text: '大尺寸按钮',
-          padding: EdgeInsets.all(8),
-        ),
-        Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            border: true,
-            block: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: false,
-            border: false,
-            block: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            border: false,
-            block: true,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.success,
-          ),
-          FNUIButton(
-            text: ('默认按钮'),
-          ),
-        ]),
-        const CodeHighlightCard(
-          code: '''
-          Wrap(spacing: 20.0, runSpacing: 20.0, children: <Widget>[
-          FNUIButton(
-            plain: true,
-            border: true,
-            block: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: false,
-            border: false,
-            block: true,
-            text: ('主要按钮'),
-            type: FNButtonType.primary,
-          ),
-          FNUIButton(
-            plain: true,
-            border: false,
-            block: true,
-            size: FNButtonSize.normal,
-            text: ('主要按钮'),
-            type: FNButtonType.success,
-          ),
-          FNUIButton(
-            text: ('默认按钮'),
-          ),
-        ])''',
+        Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            FNUIButton(
+              text: ('主要按钮'),
+              type: FNButtonType.primary,
+              iconName: FNIcons.iconBaseShare,
+              loadingSize: 18.0,
+            ),
+            FNUIButton(
+              text: ('次要按钮'),
+              type: FNButtonType.secondary,
+              iconName: FNIcons.iconBaseSetting,
+              iconPosition: FNButtonIconPosition.right,
+              loadingSize: 18.0,
+            ),
+            FNUIButton(
+              text: ('线框按钮'),
+              type: FNButtonType.hollowed,
+              iconName: FNIcons.iconBaseHelp,
+              iconPosition: FNButtonIconPosition.right,
+              loadingSize: 18.0,
+            ),
+            FNUIButton(
+              text: ('文字按钮'),
+              type: FNButtonType.text,
+              iconName: FNIcons.iconBaseSuccess,
+              loadingSize: 18.0,
+            ),
+          ],
         ),
       ]),
     );

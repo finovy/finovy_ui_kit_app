@@ -166,8 +166,8 @@ class FnAppTitle extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Image.network(
-            tr('App.logo'),
+          Image.asset(
+            'assets/logo.png',
             width: 100.0.w,
             height: 32.0.w,
             fit: BoxFit.contain,

@@ -39,14 +39,17 @@ class ToastPage extends StatelessWidget {
               child: FNUIButton(
                   text: '居中展示',
                   onTap: () => {
-                        FNUIToast.showInCenter(
-                            text: '居中展示toast', context: context)
+                        FNUIToast.show(
+                          text: '居中展示toast居中展示toast居中展示toast',
+                          align: ToastAlign.center,
+                        )
                       }),
             ),
             const CodeHighlightCard(
-              code: '''FNUIToast.showInCenter(
-                            text: '居中展示toast', context: context)
-                      })''',
+              code: '''FNUIToast.show(
+                      text: '居中展示toast居中展示toast居中展示toast',
+                      align: ToastAlign.center,
+                    )''',
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),

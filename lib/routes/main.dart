@@ -20,8 +20,9 @@ class CompRouter {
   static void init() {
     routes = <CompRoute>[
       CompRoute.group('BasicComponents', routes: basicCompRoutes),
-      CompRoute.group('FormComponents', routes: formCompRoutes),
       CompRoute.group('FeedbackComponents', routes: feedbackCompRoutes),
+      CompRoute.group('FormComponents', routes: formCompRoutes),
+
       // CompRoute.group('ActionComponents', routes: actionCompRoutes),
       CompRoute.group('NavigationComponents', routes: navigationCompRoutes),
       CompRoute.group('BusinessComponents', routes: businessCompRoutes),

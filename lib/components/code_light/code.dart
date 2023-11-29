@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_syntax_view/flutter_syntax_view.dart';
@@ -37,13 +38,14 @@ class _CodeHighlightCardState extends State<CodeHighlightCard> {
     return ExpansionCard(
       cardDecoration: BoxDecoration(color: FNColors.lineColor),
       isExpanded: widget.isExpanded ?? false,
-      tlText: '示例代码',
+      tlText: tr("HighLight.title"),
       trText: '代码拷贝',
       trWidget: FNUIEventContainer(
         onTap: () async {
           if (widget.onCopyHandler == null) {
-            Clipboard.setData(ClipboardData(text: widget.code)).then(
-                (value) => FNUIToast.show(text: '拷贝成功', align: ToastAlign.top));
+            Clipboard.setData(ClipboardData(text: widget.code)).then((value) =>
+                FNUIToast.show(
+                    text: tr("HighLight.tip"), align: ToastAlign.top));
           } else {
             widget.onCopyHandler?.call();
           }

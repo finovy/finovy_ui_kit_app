@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -11,37 +12,56 @@ class IconPage extends StatelessWidget {
     MaterialStatesController statesController = MaterialStatesController();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('icon button测试'),
+        title: const Text('Icon'),
         centerTitle: true,
       ),
       body: ListView(children: [
         const FNUIText(
-          text: 'icon按钮',
+          text: 'icon button',
           padding: EdgeInsets.all(8),
         ),
         Wrap(
           spacing: 20.0,
           runSpacing: 20.0,
           children: <Widget>[
-            FNUIIcon.name(
-              Icons.chat,
-              size: 32.0,
-            ),
-            FNUIIcon.url(
-              'https://b.yzcdn.cn/vant/icon-demo-1126.png',
-              size: 32.0,
+            SizedBox(
+              width: 180,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: FNUIButton(
+                  text: tr('Button.hairlineButton'),
+                  type: FNButtonType.hollowed,
+                  iconName: FNIcons.iconBaseHelp,
+                  iconPosition: FNButtonIconPosition.left,
+                  loadingSize: 18.0,
+                ),
+              ),
             ),
           ],
         ),
         const CodeHighlightCard(
-          code: '''// 按钮创建示例 类型：ButtonType.main 状态:ButtonStatus.available
-FNUIButton(
-          buttonType: ButtonType.main,
-          status: ButtonStatus.available,
-          icon: Icon(Icons.add),
-          text: 'icon主要按钮',
-          margin: EdgeInsets.all(8),
-        )''',
+          code: '''
+          Wrap(
+          spacing: 20.0,
+          runSpacing: 20.0,
+          children: <Widget>[
+            SizedBox(
+              width: 180,
+              child: FNUIButton(
+                text: tr('Button.hairlineButton'),
+                type: FNButtonType.hollowed,
+                iconName: FNIcons.iconBaseHelp,
+                iconPosition: FNButtonIconPosition.left,
+                loadingSize: 18.0,
+              ),
+            ),
+          ],
+        )
+          ''',
+        ),
+        const FNUIText(
+          text: 'all icons',
+          padding: EdgeInsets.all(8),
         ),
         Wrap(
           spacing: 20.0,

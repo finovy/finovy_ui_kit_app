@@ -10,7 +10,7 @@ class CellPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cell单元格'),
+        title: const Text('Cell'),
         centerTitle: true,
       ),
       body: ListView(children: [

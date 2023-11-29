@@ -12,7 +12,7 @@ class ImagePage extends StatelessWidget {
     MaterialStatesController statesController = MaterialStatesController();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('button测试'),
+        title: const Text('Image'),
         centerTitle: true,
       ),
       body: ListView(children: [

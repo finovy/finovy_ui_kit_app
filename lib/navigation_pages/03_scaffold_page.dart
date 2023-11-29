@@ -12,7 +12,7 @@ class ScaffoldPage extends StatelessWidget {
     return FNUIScaffold(
       leftCallback: () => Navigator.pop(context),
       rightWidget: Icon(Icons.settings),
-      title: 'Scaffold Page',
+      title: 'Scaffold',
       child: Container(
         color: FNColors.green,
         child: Column(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,100 +11,97 @@ class TagPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Tag Page'),
+          title: const Text('Tag'),
           centerTitle: true,
         ),
         body: ListView(
           children: [
             FNUICell(
-              title: '不同类型类型',
+              title: tr("Tag.tagStyle"),
               suffix: Row(
                 children: [
                   FNUITag(
                     type: FNTagType.primary,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   FNUITag(
                     type: FNTagType.danger,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   FNUITag(
                     type: FNTagType.warning,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                 ],
               ),
             ),
             const CodeHighlightCard(
-              code: '''FNUICell(
-              title: '不同类型类型',
-              suffix: Row(
+              code: '''Row(
                 children: [
                   FNUITag(
                     type: FNTagType.primary,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   FNUITag(
                     type: FNTagType.danger,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   FNUITag(
                     type: FNTagType.warning,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                 ],
-              ),
-            )''',
+              )''',
             ),
             FNUICell(
-              title: '镂空类型',
+              title: tr("Tag.plain"),
               suffix: FNUITag(
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
               ),
             ),
             const CodeHighlightCard(
               code: '''FNUITag(
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
               )''',
             ),
             FNUICell(
-              title: '圆角类型',
+              title: tr("Tag.round"),
               suffix: FNUITag(
                 round: true,
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
               ),
             ),
             const CodeHighlightCard(
               code: '''FNUITag(
                 round: true,
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
               )''',
             ),
             FNUICell(
-              title: '标签大小',
+              title: tr("Tag.customSize"),
               suffix: Row(
                 children: [
                   FNUITag(
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.large,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
@@ -112,7 +110,7 @@ class TagPage extends StatelessWidget {
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.medium,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
@@ -121,21 +119,19 @@ class TagPage extends StatelessWidget {
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.normal,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                 ],
               ),
             ),
             const CodeHighlightCard(
-              code: '''FNUICell(
-              title: '标签大小',
-              suffix: Row(
+              code: '''Row(
                 children: [
                   FNUITag(
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.large,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
@@ -144,7 +140,7 @@ class TagPage extends StatelessWidget {
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.medium,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                   SizedBox(
                     width: 10,
@@ -153,19 +149,18 @@ class TagPage extends StatelessWidget {
                     round: true,
                     type: FNTagType.danger,
                     size: FNTagSize.normal,
-                    child: Text('标签'),
+                    child: Text(tr("content")),
                   ),
                 ],
-              ),
-            )''',
+              )''',
             ),
             FNUICell(
-              title: '显示关闭按钮',
+              title: tr("Tag.closeable"),
               suffix: FNUITag(
                 round: true,
                 closeable: true,
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
                 onClose: () => print('close tag'),
               ),
             ),
@@ -174,7 +169,7 @@ class TagPage extends StatelessWidget {
                 round: true,
                 closeable: true,
                 type: FNTagType.success,
-                child: Text('标签'),
+                child: Text(tr("content")),
                 onClose: () => print('close tag'),
               )''',
             ),

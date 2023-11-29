@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
@@ -11,7 +12,7 @@ class ToastPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Toast Page'),
+        title: const Text('Toast'),
         centerTitle: true,
       ),
       body: ListView(children: [
@@ -20,61 +21,67 @@ class ToastPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '顶部展示（超长文本）',
+                  text: '${tr("Toast.positionTop")}（${tr("Toast.longText")}）',
                   onTap: () => {
                         FNUIToast.show(
-                          text: '顶部展示顶部展示顶部展示顶部展示顶部展示顶部展示特别长的文本',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
                           align: ToastAlign.top,
                         )
                       }),
             ),
             const CodeHighlightCard(
               code: '''FNUIToast.show(
-                          text: '顶部展示顶部展示顶部展示顶部展示顶部展示顶部展示特别长的文本',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
                           align: ToastAlign.top,
                         )''',
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '居中展示',
+                  text: tr("Toast.positionCenter"),
                   onTap: () => {
                         FNUIToast.show(
-                          text: '居中展示toast居中展示toast居中展示toast',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
                           align: ToastAlign.center,
                         )
                       }),
             ),
             const CodeHighlightCard(
               code: '''FNUIToast.show(
-                      text: '居中展示toast居中展示toast居中展示toast',
-                      align: ToastAlign.center,
-                    )''',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
+                          align: ToastAlign.center,
+                        )''',
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '底部展示',
+                  text: tr("Toast.positionBottom"),
                   onTap: () => {
                         FNUIToast.show(
-                          text: '底部展示toast',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
                           align: ToastAlign.bottom,
                         )
                       }),
             ),
             const CodeHighlightCard(
               code: '''FNUIToast.show(
-                          text: '底部展示toast',
+                          text:
+                              'Creates a visual scaffold for Material Design widgets.',
                           align: ToastAlign.bottom,
                         )''',
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '左侧带icon展示(失败)',
+                  text: tr("Toast.text3"),
                   onTap: () => {
                         FNUIToast.show(
-                          text: '左侧带icon展示',
+                          text: tr("Toast.text3"),
                           preIcon: FNUIIcon(
                             iconName: FNIcons.iconBaseFailed,
                             color: FNColors.iconDanger,
@@ -84,7 +91,7 @@ class ToastPage extends StatelessWidget {
             ),
             const CodeHighlightCard(
               code: '''FNUIToast.show(
-                          text: '左侧带icon展示',
+                          text: tr("Toast.text3"),
                           preIcon: FNUIIcon(
                             iconName: FNIcons.iconBaseFailed,
                             color: FNColors.iconDanger,
@@ -94,10 +101,10 @@ class ToastPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '左侧带icon展示（成功）',
+                  text: tr("Toast.text2"),
                   onTap: () => {
                         FNUIToast.show(
-                          text: '左侧带icon展示',
+                          text: tr("Toast.text2"),
                           align: ToastAlign.top,
                           preIcon: FNUIIcon(
                             iconName: FNIcons.iconBaseSuccess,
@@ -108,7 +115,7 @@ class ToastPage extends StatelessWidget {
             ),
             const CodeHighlightCard(
               code: '''FNUIToast.show(
-                          text: '左侧带icon展示',
+                          text: tr("Toast.text2"),
                           align: ToastAlign.top,
                           preIcon: FNUIIcon(
                             iconName: FNIcons.iconBaseSuccess,
@@ -119,17 +126,17 @@ class ToastPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: FNUIButton(
-                  text: '左侧带icon展示（加载中）',
+                  text: tr("Toast.title2"),
                   onTap: () => {
                         FNUIToast.show(
-                            text: '左侧带icon展示',
+                            text: tr("Toast.title2"),
                             align: ToastAlign.top,
                             preIcon: const CupertinoActivityIndicator())
                       }),
             ),
             const CodeHighlightCard(
-              code: '''FNUIToast.show(
-                            text: '左侧带icon展示',
+              code: ''' FNUIToast.show(
+                            text: tr("Toast.title2"),
                             align: ToastAlign.top,
                             preIcon: const CupertinoActivityIndicator())''',
             ),

@@ -10,7 +10,7 @@ class RatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rate评分'),
+        title: const Text('Rate'),
         centerTitle: true,
       ),
       body: ListView(children: [

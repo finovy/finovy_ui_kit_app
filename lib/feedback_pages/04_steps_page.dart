@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,38 +11,38 @@ class StepsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Step Page'),
+          title: const Text('Steps'),
           centerTitle: true,
         ),
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            FNUIText(text: '步骤条(横向)'),
+            FNUIText(text: tr("Steps.horizontal")),
             FNUISteps(
               active: 2,
               finishIconName: Icons.circle,
               activeIconName: Icons.check_circle,
               children: <FNStep>[
-                FNStep(child: Text('第一步')),
-                FNStep(child: Text('第二步')),
-                FNStep(child: Text('第三步')),
-                FNStep(child: Text('第四步')),
+                FNStep(child: Text(tr("Steps.step1"))),
+                FNStep(child: Text(tr("Steps.step2"))),
+                FNStep(child: Text(tr("Steps.step3"))),
+                FNStep(child: Text(tr("Steps.step4"))),
               ],
             ),
             const CodeHighlightCard(
-              code: '''FNUISteps(
+              code: ''' FNUISteps(
               active: 2,
               finishIconName: Icons.circle,
               activeIconName: Icons.check_circle,
               children: <FNStep>[
-                FNStep(child: Text('第一步')),
-                FNStep(child: Text('第二步')),
-                FNStep(child: Text('第三步')),
-                FNStep(child: Text('第四步')),
+                FNStep(child: Text(tr("Steps.step1"))),
+                FNStep(child: Text(tr("Steps.step2"))),
+                FNStep(child: Text(tr("Steps.step3"))),
+                FNStep(child: Text(tr("Steps.step4"))),
               ],
             )''',
             ),
-            FNUIText(text: '步骤条(纵向)'),
+            FNUIText(text: tr("Steps.vertical")),
             FNUISteps(
               direction: Axis.vertical,
               active: 2,
@@ -52,7 +53,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('开始申购'),
+                    Text(tr("Steps.step1")),
                     SizedBox(
                       height: 12,
                     ),
@@ -63,7 +64,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('等待确认净值'),
+                    Text(tr("Steps.step2")),
                     SizedBox(
                       height: 12,
                     ),
@@ -74,7 +75,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('确认成功'),
+                    Text(tr("Steps.step3")),
                     SizedBox(
                       height: 12,
                     ),
@@ -85,7 +86,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('完成申购'),
+                    Text(tr("Steps.step4")),
                     SizedBox(
                       height: 12,
                     ),
@@ -105,7 +106,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('开始申购'),
+                    Text(tr("Steps.step1")),
                     SizedBox(
                       height: 12,
                     ),
@@ -116,7 +117,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('等待确认净值'),
+                    Text(tr("Steps.step2")),
                     SizedBox(
                       height: 12,
                     ),
@@ -127,7 +128,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('确认成功'),
+                    Text(tr("Steps.step3")),
                     SizedBox(
                       height: 12,
                     ),
@@ -138,7 +139,7 @@ class StepsPage extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('完成申购'),
+                    Text(tr("Steps.step4")),
                     SizedBox(
                       height: 12,
                     ),

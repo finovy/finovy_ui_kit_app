@@ -62,7 +62,6 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
             locale: context.locale,
             theme: ThemeData(
               primaryColor: FNColors.primary,
-
               appBarTheme: AppBarTheme(
                 elevation: 0.0,
                 foregroundColor: FNColors.textColor,
@@ -82,14 +81,19 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
           ),
         );
       },
-      child: const MyHomePage(),
+      child: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,8 +109,19 @@ class MyHomePage extends StatelessWidget {
             bottom: 20.0.w,
           ),
           children: <Widget>[
-            const FnAppTitle(),
-            const FnAppSubTitle(),
+            FnAppTitle(
+              languageChanged: () {
+                setState(() {
+                  if (context.locale == Locale('zh')) {
+                    context.setLocale(Locale('en'));
+                  } else {
+                    context.setLocale(Locale('zh'));
+                  }
+                });
+                print(context.locale.toString());
+              },
+            ),
+            FnAppSubTitle(),
             ...renderList(context, CompRouter.routes)
           ],
         ),
@@ -154,7 +169,9 @@ class MyHomePage extends StatelessWidget {
 }
 
 class FnAppTitle extends StatelessWidget {
-  const FnAppTitle({Key? key}) : super(key: key);
+  final VoidCallback? languageChanged;
+
+  const FnAppTitle({Key? key, this.languageChanged}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -177,7 +194,16 @@ class FnAppTitle extends StatelessWidget {
             'Finovy UIKit',
             // tr('App.title'),
             style: TextStyle(fontSize: 24.0.w),
-          )
+          ),
+          Expanded(
+              child: FNUIButton(
+            type: FNButtonType.text,
+            text: context.locale == Locale('en') ? '中文' : 'us',
+            iconName: Icons.language,
+            textStyle:
+                TextStyle(fontSize: FNFontSize10, color: FNColors.primary),
+            onTap: () => languageChanged?.call(),
+          ))
         ],
       ),
     );

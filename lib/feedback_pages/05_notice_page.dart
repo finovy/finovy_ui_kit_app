@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,49 +11,46 @@ class NoticeBarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('NoticeBar Page'),
+          title: const Text('NoticeBar'),
           centerTitle: true,
         ),
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            FNUIText(text: 'icon+滚动'),
+            FNUIText(text: 'icon + scroll'),
             FNUINoticeBar(
               scrollable: true,
-              leftIconName: Icons.access_alarm,
-              text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+              leftIconName: FNIcons.iconBaseMessage,
+              text: tr("Text.description"),
             ),
             const CodeHighlightCard(
               code: '''FNUINoticeBar(
               scrollable: true,
               leftIconName: Icons.access_alarm,
               text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+                  'description description description description description description description ',
             )''',
             ),
-            FNUIText(text: '多行展示'),
+            FNUIText(text: tr("NoticeBar.wrapable")),
             FNUINoticeBar(
               scrollable: false,
               wrapAble: true,
-              text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+              text: tr("Text.description").substring(0, 100),
             ),
             const CodeHighlightCard(
               code: '''FNUINoticeBar(
               scrollable: false,
               wrapAble: true,
               text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+                  'description description description description description description description ',
             )''',
             ),
-            FNUIText(text: '可关闭'),
+            FNUIText(text: tr("Tag.closeable")),
             FNUINoticeBar(
               mode: FNNoticeBarMode.closeable,
               scrollable: true,
               background: FNColors.green,
-              text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+              text: tr("Text.description"),
             ),
             const CodeHighlightCard(
               code: '''FNUINoticeBar(
@@ -60,7 +58,7 @@ class NoticeBarPage extends StatelessWidget {
               scrollable: true,
               background: FNColors.green,
               text:
-                  'Rancher 为 DevOps 工程师提供了一个直观的用户界面来管理他们的服务容器,用户不需要深入了解 Kubernetes 概念就可以开始使用 Rancher',
+                  'description description description description description description description ',
             )''',
             ),
           ],

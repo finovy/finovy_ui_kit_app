@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,32 +11,35 @@ class TextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Text测试'),
+        title: const Text('Text'),
         centerTitle: true,
       ),
       body: ListView(children: [
-        const FNUIText(
-          text:
-              '自动换行：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo',
+        FNUIText(
+          text: '${tr("Text.word_wrap")}：${tr("Text.description")}',
           padding: EdgeInsets.all(8),
         ),
         const CodeHighlightCard(
-          code: '''FNUIText(
-          text: '自动换行：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo文本展示demo',
+          code: '''
+          FNUIText(
+          text: 'tr("Text.word_wrap")：{tr("Text.description")}',
           padding: EdgeInsets.all(8),
-        )''',
+        )
+          ''',
         ),
-        const FNUIText(
-          text: '限制行数：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo',
+        FNUIText(
+          text: '${tr("Text.max_line")}：${tr("Text.description")}',
           padding: EdgeInsets.all(8),
           maxLines: 2,
         ),
         const CodeHighlightCard(
-          code: '''FNUIText(
-          text: '限制行数：文本展示demo文本展示demo文本展示demo、文本展示demo文本展示demo文本展示demo',
+          code: '''
+          FNUIText(
+          text: 'tr("Text.word_wrap")：{tr("Text.description")}',
           padding: EdgeInsets.all(8),
           maxLines: 2,
-        )''',
+        )
+          ''',
         ),
       ]),
     );

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,41 +11,41 @@ class PlaceHolderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Placeholder Page'),
+        title: const Text('Placeholder'),
         centerTitle: true,
       ),
       body: ListView(children: [
         Column(
           children: [
-            const FNUIEmptyWidget(
+            FNUIEmptyWidget(
               state: EmptyWidgetState.nodata,
-              title: '暂无数据',
+              title: tr("Empty.description"),
             ),
             const Divider(),
             const CodeHighlightCard(
               code: '''FNUIEmptyWidget(
               state: EmptyWidgetState.nodata,
-              title: '暂无数据',
+              title: tr("Empty.description"),
             )''',
             ),
             FNUIEmptyWidget(
               state: EmptyWidgetState.noNetwork,
-              title: '网络异常',
+              title: tr("Empty.network"),
               onTapButton: () {},
-              buttonTitle: '点击重试',
+              buttonTitle: tr("ActionBar.clickButton"),
             ),
             const Divider(),
             const CodeHighlightCard(
               code: '''FNUIEmptyWidget(
               state: EmptyWidgetState.noNetwork,
-              title: '网络异常',
+              title: tr("Empty.network"),
               onTapButton: () {},
-              buttonTitle: '点击重试',
+              buttonTitle: tr("ActionBar.clickButton"),
             )''',
             ),
             FNUIEmptyWidget(
               state: EmptyWidgetState.noSearchResult,
-              title: '没有搜索结果',
+              title: tr("Empty.search"),
               optionWidget: SizedBox(
                 height: 40,
                 child: Row(
@@ -52,7 +53,7 @@ class PlaceHolderPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: FNUIButton(
-                        text: '去搜索',
+                        text: tr("search"),
                       ),
                     ),
                     SizedBox(
@@ -60,7 +61,7 @@ class PlaceHolderPage extends StatelessWidget {
                     ),
                     Expanded(
                       child: FNUIButton(
-                        text: '返回上一级',
+                        text: tr("back"),
                       ),
                     ),
                   ],
@@ -68,7 +69,9 @@ class PlaceHolderPage extends StatelessWidget {
               ),
             ),
             const CodeHighlightCard(
-              code: '''FNUIEmptyWidgetConfigure(
+              code: '''FNUIEmptyWidget(
+              state: EmptyWidgetState.noSearchResult,
+              title: tr("Empty.search"),
               optionWidget: SizedBox(
                 height: 40,
                 child: Row(
@@ -76,7 +79,7 @@ class PlaceHolderPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: FNUIButton(
-                        text: '去搜索',
+                        text: tr("search"),
                       ),
                     ),
                     SizedBox(
@@ -84,15 +87,11 @@ class PlaceHolderPage extends StatelessWidget {
                     ),
                     Expanded(
                       child: FNUIButton(
-                        text: '返回上一级',
+                        text: tr("back"),
                       ),
                     ),
                   ],
                 ),
-              ),
-              child: FNUIEmptyWidget(
-                state: EmptyWidgetState.noSearchResult,
-                title: '没有搜索结果',
               ),
             )''',
             ),

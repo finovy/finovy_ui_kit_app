@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,14 +11,14 @@ class GridPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Grid Page'),
+          title: const Text('Grid'),
           centerTitle: true,
         ),
         body: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: FNUIText(text: '普通用法'),
+              child: FNUIText(text: tr("Grid.common")),
             ),
             FNUIGrid(
               columnNum: 4,
@@ -27,26 +28,27 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             ),
             const CodeHighlightCard(
               code: '''FNUIGrid(
-              columnNum: 3,
-              children: List<FlanGridItem>.generate(
-                6,
-                    (int index) => FlanGridItem(
+              columnNum: 4,
+              square: true,
+              children: List<FNGridItem>.generate(
+                8,
+                (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             )''',
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: FNUIText(text: '有间隔'),
+              child: FNUIText(text: tr("Grid.gap")),
             ),
             FNUIGrid(
               columnNum: 4,
@@ -57,7 +59,7 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             ),
@@ -71,14 +73,14 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             )''',
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: FNUIText(text: '无边框'),
+              child: FNUIText(text: tr("Grid.frameless")),
             ),
             FNUIGrid(
               columnNum: 4,
@@ -90,7 +92,7 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             ),
@@ -105,14 +107,14 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '测试文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             )''',
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: FNUIText(text: '内容横向排列'),
+              child: FNUIText(text: tr("Grid.horizontal")),
             ),
             FNUIGrid(
               columnNum: 4,
@@ -123,7 +125,7 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             ),
@@ -137,7 +139,7 @@ class GridPage extends StatelessWidget {
                 (int index) => FNGridItem(
                   key: ValueKey<int>(index),
                   iconName: Icons.image,
-                  text: '文本',
+                  text: tr("Grid.text"),
                 ),
               ),
             )''',

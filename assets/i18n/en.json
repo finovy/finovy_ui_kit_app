@@ -36,6 +36,7 @@
     "Switch": "Switch",
     "Uploader": "Uploader",
     "ActionComponents": "Action Components",
+    "FeedbackComponents": "Feedback Components",
     "ActionSheet": "ActionSheet",
     "Dialog": "Dialog",
     "DropdownMenu": "DropdownMenu",
@@ -126,7 +127,9 @@
     "loading": "Loading",
     "shape": "Shape",
     "default": "Default",
+    "secondary": "Secondary",
     "primary": "Primary",
+    "link": "Link(Text)",
     "success": "Success",
     "danger": "Danger",
     "warning": "Warning",
@@ -146,7 +149,16 @@
     "customColor": "Custom Color",
     "pure": "Pure",
     "gradient": "Gradient",
-    "blockElement": "Block Element"
+    "blockElement": "Block Element",
+    "normal_status": "Normal Status",
+    "loading_status": "Loading Status",
+    "disabled_status": "Disabled Status",
+    "custom_status": "Custom Icon"
+  },
+  "Text": {
+    "description": "On Windows, macOS, and Linux, Flutter runs in the Dart virtual machine, which has a just-in-time compilation execution engine. When writing and debugging applications, Flutter uses the just-in-time compilation function for \"Hot Reload\", which can inject modifications to source files into the running application. Flutter extends this functionality by supporting stateful hot reload, where in most cases changes to the source code are immediately reflected in the running app without restarting or losing any state",
+    "word_wrap": "word wrap",
+    "max_line": "max line"
   },
   "Cell": {
     "cell": "Cell title",
@@ -211,7 +223,7 @@
     "fail": "Fail",
     "text": "Some messages",
     "text2": "Success",
-    "text3": "Fail",
+    "text3": "Fail messages",
     "text4": "{second} seconds",
     "title1": "Text",
     "title2": "Loading",
@@ -223,7 +235,9 @@
     "positionTop": "Top",
     "updateMessage": "Update Message",
     "positionBottom": "Bottom",
-    "customPosition": "Custom Position"
+    "customPosition": "Custom Position",
+    "longText": "long text",
+    "positionCenter": "Center"
   },
   "Switch": {
     "title": "Title",
@@ -342,7 +356,10 @@
     "urlRoute": "URL",
     "vueRoute": "Vue Router",
     "showBadge": "Show Badge",
-    "horizontal": "Horizontal"
+    "horizontal": "Horizontal",
+    "common": "Common",
+    "gap": "Gap",
+    "frameless": "Frameless"
   },
   "Overlay": {
     "showOverlay": "Show Overlay",
@@ -689,10 +706,22 @@
   "Dialog": {
     "alert1": "Alert",
     "alert2": "Alert without title",
-    "confirm": "Confirm dialog",
+    "confirm": "Confirm",
+    "cancel": "cancel",
+    "title": "title",
     "beforeClose": "Before Close",
     "roundButton": "Round Button Style",
-    "componentCall": "Component Call"
+    "componentCall": "Component Call",
+    "text1": "no title、single button",
+    "text2": "title、single button",
+    "text3": "title、double button",
+    "text4": "title、content、double button、error",
+    "text5": "title、content、double button、icon",
+    "text6": "title、content、actions",
+    "text7": "title、content、rich text",
+    "text8": "custom",
+    "text9": "input",
+    "text10": "password input"
   },
   "Notify": {
     "primary": "Primary",
@@ -774,5 +803,17 @@
     "disabled": " is disabled",
     "matchByName": "Match By Name",
     "beforeChange": "Before Change"
+  },
+  "HighLight": {
+    "title": "Demo code",
+    "tip": "Copy successfully"
+  },
+  "Input": {
+    "general": "general",
+    "hint": "please enter text"
+  },
+  "Verify": {
+    "general": "Default style",
+    "square": "Square border"
   }
 }

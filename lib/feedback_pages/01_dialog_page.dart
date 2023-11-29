@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -10,96 +11,99 @@ class DialogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dialog Page'),
+        title: const Text('Dialog'),
         centerTitle: true,
       ),
       body: ListView(children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '无标题、单按钮',
+              text: tr("Dialog.text1"),
               onTap: () => {
                     FNUIDialogManager.showSingleButtonDialog(context,
-                        label: "知道了", message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息")
+                        label: tr("Dialog.confirm"),
+                        message: tr("App.description"))
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showSingleButtonDialog(context,
-                        label: "知道了",\n message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息")\n''',
+                    FNUIDialogManager.showSingleButtonDialog(context,
+                        label: tr("Dialog.confirm"),
+                        message: tr("App.description"))
+            ''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有标题、单按钮',
+              text: tr("Dialog.text2"),
               onTap: () => {
                     FNUIDialogManager.showSingleButtonDialog(context,
-                        title: '标题',
-                        label: "知道了",
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                        title: tr("Dialog.title"),
+                        label: tr("Dialog.confirm"),
+                        message: tr("App.description"),
                         onTap: () => false)
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showSingleButtonDialog(context,
-                        title: '标题',
-                        label: "知道了",
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                  FNUIDialogManager.showSingleButtonDialog(context,
+                        title: tr("Dialog.title"),
+                        label: tr("Dialog.confirm"),
+                        message: tr("App.description"),
                         onTap: () => false)''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有标题、双按钮',
+              text: tr("Dialog.text3"),
               onTap: () => {
                     FNUIDialogManager.showConfirmDialog(
                       context,
-                      title: '标题',
-                      cancel: '取消',
-                      confirm: '确定',
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                      title: tr("Dialog.title"),
+                      cancel: tr("Dialog.cancel"),
+                      confirm: tr("Dialog.confirm"),
+                      message: tr("App.description"),
                       // onConfirm: () => Navigator.pop(context),
                     )
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showConfirmDialog(
+                  FNUIDialogManager.showConfirmDialog(
                       context,
-                      title: '标题',
-                      cancel: '取消',
-                      confirm: '确定',
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                      title: tr("Dialog.title"),
+                      cancel: tr("Dialog.cancel"),
+                      confirm: tr("Dialog.confirm"),
+                      message: tr("App.description"),
                       // onConfirm: () => Navigator.pop(context),
                     )''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有标题、有内容、双按钮、错误信息',
+              text: tr("Dialog.text4"),
               onTap: () => {
                     FNUIDialogManager.showSingleButtonDialog(context,
-                        label: "确定",
-                        title: '标题内容',
-                        warning: '错误文案展示/警示文案展示',
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                        label: tr("Dialog.confirm"),
+                        title: tr("Dialog.title"),
+                        warning: 'error or warning description',
+                        message: tr("App.description"),
                         onTap: () => true)
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showSingleButtonDialog(context,
-                        label: "确定",
-                        title: '标题内容',
-                        warning: '错误文案展示/警示文案展示',
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                  FNUIDialogManager.showSingleButtonDialog(context,
+                        label: tr("Dialog.confirm"),
+                        title: tr("Dialog.title"),
+                        warning: 'error or warning description',
+                        message: tr("App.description"),
                         onTap: () => true)''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有标题、有内容、双按钮、有图标',
+              text: tr("Dialog.text5"),
               onTap: () => {
                     FNUIDialogManager.showConfirmDialog(
                       context,
@@ -110,10 +114,10 @@ SMUIDialogManager.showSingleButtonDialog(context,
                         height: 20.0,
                         package: 'fn_ui_kit',
                       ),
-                      title: "标题内容",
-                      confirm: "确定",
-                      cancel: "取消",
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                      title: tr("Dialog.title"),
+                      confirm: tr("Dialog.confirm"),
+                      cancel: tr("Dialog.cancel"),
+                      message: tr("App.description"),
                       onCancel: () => true,
                       onConfirm: () => true,
                     )
@@ -121,7 +125,7 @@ SMUIDialogManager.showSingleButtonDialog(context,
         ),
         const CodeHighlightCard(
           code: '''
-  FNUIDialogManager.showConfirmDialog(
+                FNUIDialogManager.showConfirmDialog(
                       context,
                       showIcon: true,
                       iconWidget: Image.asset(
@@ -130,10 +134,10 @@ SMUIDialogManager.showSingleButtonDialog(context,
                         height: 20.0,
                         package: 'fn_ui_kit',
                       ),
-                      title: "标题内容",
-                      confirm: "确定",
-                      cancel: "取消",
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                      title: tr("Dialog.title"),
+                      confirm: tr("Dialog.confirm"),
+                      cancel: tr("Dialog.cancel"),
+                      message: tr("App.description"),
                       onCancel: () => true,
                       onConfirm: () => true,
                     )''',
@@ -141,16 +145,16 @@ SMUIDialogManager.showSingleButtonDialog(context,
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有标题、有内容、有多个action',
+              text: tr("Dialog.text6"),
               onTap: () => {
                     FNUIDialogManager.showMoreButtonDialog(context,
                         actions: [
-                          '选项一',
-                          '选项二',
-                          '选项三',
+                          tr("ActionSheet.option1"),
+                          tr("ActionSheet.option2"),
+                          tr("ActionSheet.option3"),
                         ],
-                        title: '这是标题',
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                        title: tr("Dialog.title"),
+                        message: tr("App.description"),
                         indexedActionClickCallback: (index) {
                       FNUIToast.show(
                         text: "$index",
@@ -161,16 +165,16 @@ SMUIDialogManager.showSingleButtonDialog(context,
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showMoreButtonDialog(context,
+                FNUIDialogManager.showMoreButtonDialog(context,
                         actions: [
-                          '选项一',
-                          '选项二',
-                          '选项三',
+                          tr("ActionSheet.option1"),
+                          tr("ActionSheet.option2"),
+                          tr("ActionSheet.option3"),
                         ],
-                        title: '这是标题',
-                        message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息。",
+                        title: tr("Dialog.title"),
+                        message: tr("App.description"),
                         indexedActionClickCallback: (index) {
-                      SMUIToast.show(
+                      FNUIToast.show(
                         text: "index",
                       );
                       return true;
@@ -179,51 +183,41 @@ SMUIDialogManager.showMoreButtonDialog(context,
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '有图标、有标题、有内容、有富文本',
+              text: tr("Dialog.text7"),
               onTap: () => {
                     FNUIDialogManager.showConfirmDialog(
                       context,
-                      cancel: "取消",
-                      confirm: "确定",
-                      title: "标题",
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                      cancel: tr("Dialog.cancel"),
+                      confirm: tr("Dialog.confirm"),
+                      title: tr("Dialog.title"),
+                      message: tr("App.description"),
                       messageWidget: Padding(
                         padding:
                             const EdgeInsets.only(top: 6, left: 24, right: 24),
-                        // child: Html(
-                        //     data:
-                        //         "这是一条增使用标签修改文字颜色的demo<font color = '#8ac6d1'>我是带颜色的文字</font>，"),
                       ),
                       showIcon: true,
-                      // onCancel: () => Navigator.pop(context),
-                      // onConfirm: () => Navigator.pop(context),
                     )
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showConfirmDialog(
+                  FNUIDialogManager.showConfirmDialog(
                       context,
-                      cancel: "取消",
-                      confirm: "确定",
-                      title: "标题",
-                      message: "辅助内容信息辅助内容信息辅助内容信息辅助内容信息辅助内容信息",
+                      cancel: tr("Dialog.cancel"),
+                      confirm: tr("Dialog.confirm"),
+                      title: tr("Dialog.title"),
+                      message: tr("App.description"),
                       messageWidget: Padding(
                         padding:
                             const EdgeInsets.only(top: 6, left: 24, right: 24),
-                        // child: Html(
-                        //     data:
-                        //         "这是一条增使用标签修改文字颜色的demo<font color = '#8ac6d1'>我是带颜色的文字</font>，"),
                       ),
                       showIcon: true,
-                      // onCancel: () => Navigator.pop(context),
-                      // onConfirm: () => Navigator.pop(context),
                     )''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '完全自定义',
+              text: tr("Dialog.text8"),
               onTap: () => {
                     FNUIDialogManager.showCustomerDialog(context,
                         actions: [],
@@ -233,21 +227,21 @@ SMUIDialogManager.showConfirmDialog(
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showCustomerDialog(context,
+                  FNUIDialogManager.showCustomerDialog(context,
                         actions: [],
                         contentWidget:
-                            Center(child: SMUIImage(KImagePath.commonEmpty)))''',
+                            Center(child: FNUIImage('icon_common_empty.png')))''',
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '输入框对话框',
+              text: tr("Dialog.text9"),
               onTap: () => {
                     FNUIDialogManager.showCustomerDialog(context,
                         contentWidget: FNCenterInputDialog(
-                          title: '请输入分组名称',
-                          hint: '最多八个字',
-                          errorText: '请输入分组名称',
+                          title: tr("Dialog.title"),
+                          hint: 'limited 8 length',
+                          errorText: 'tips description',
                           textFieldCallback: (String value) {
                             FNUIToast.show(
                               text: value,
@@ -258,13 +252,13 @@ SMUIDialogManager.showCustomerDialog(context,
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showCustomerDialog(context,
-                        contentWidget: SMCenterInputDialog(
-                          title: '请输入分组名称',
-                          hint: '最多八个字',
-                          errorText: '请输入分组名称',
+                    FNUIDialogManager.showCustomerDialog(context,
+                        contentWidget: FNCenterInputDialog(
+                          title: tr("Dialog.title"),
+                          hint: 'limited 8 length',
+                          errorText: 'tips description',
                           textFieldCallback: (String value) {
-                            SMUIToast.show(
+                            FNUIToast.show(
                               text: value,
                             );
                           },
@@ -273,38 +267,42 @@ SMUIDialogManager.showCustomerDialog(context,
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FNUIButton(
-              text: '密码输入框对话框',
+              text: tr("Dialog.text10"),
               onTap: () => {
-                    FNUIDialogManager.showCustomerDialog(context,
-                        contentWidget: FNCenterInputDialog(
-                          title: '身份信息校验',
-                          message: '为确保本人的权益，我们需要对您的身份进行校验',
-                          hint: '请输入密码',
-                          errorText: '密码错误',
-                          keyboardType: BaseKeyBoardType.password,
-                          textFieldCallback: (String value) {},
-                          confirmCallBack: (value) {
-                            //返回false显示错误信息，返回true则关闭对话框
-                            return false;
-                          },
-                        ))
+                    FNUIDialogManager.showCustomerDialog(
+                      context,
+                      contentWidget: FNCenterInputDialog(
+                        title: tr("Dialog.title"),
+                        message: tr("App.description"),
+                        hint: 'please enter password',
+                        errorText: 'password error',
+                        keyboardType: BaseKeyBoardType.password,
+                        textFieldCallback: (String value) {},
+                        confirmCallBack: (value) {
+                          //返回false显示错误信息，返回true则关闭对话框
+                          return false;
+                        },
+                      ),
+                    )
                   }),
         ),
         const CodeHighlightCard(
           code: '''
-SMUIDialogManager.showCustomerDialog(context,
-                        contentWidget: SMCenterInputDialog(
-                          title: '身份信息校验',
-                          message: '为确保本人的权益，我们需要对您的身份进行校验',
-                          hint: '请输入密码',
-                          errorText: '密码错误',
-                          keyboardType: BaseKeyBoardType.password,
-                          textFieldCallback: (String value) {},
-                          confirmCallBack: (value) {
-                            //返回false显示错误信息，返回true则关闭对话框
-                            return false;
-                          },
-                        ))''',
+                  FNUIDialogManager.showCustomerDialog(
+                      context,
+                      contentWidget: FNCenterInputDialog(
+                        title: tr("Dialog.title"),
+                        message: tr("App.description"),
+                        hint: 'please enter password',
+                        errorText: 'password error',
+                        keyboardType: BaseKeyBoardType.password,
+                        textFieldCallback: (String value) {},
+                        confirmCallBack: (value) {
+                          //返回false显示错误信息，返回true则关闭对话框
+                          return false;
+                        },
+                      ),
+                    )''',
         ),
       ]),
     );

@@ -10,7 +10,7 @@ class RadioPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Radio单选框'),
+        title: const Text('Radio'),
         centerTitle: true,
       ),
       body: ListView(children: [

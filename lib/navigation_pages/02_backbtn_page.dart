@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
 
@@ -11,7 +10,7 @@ class BackBtnPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('BackBtn Page'),
+          title: const Text('BackBtn'),
           centerTitle: true,
         ),
         body: ListView(

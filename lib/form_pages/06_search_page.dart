@@ -10,7 +10,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search搜素'),
+        title: const Text('Search'),
         centerTitle: true,
       ),
       body: ListView(children: [

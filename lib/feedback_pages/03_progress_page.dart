@@ -10,13 +10,13 @@ class ProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Progress Page'),
+          title: const Text('Progress'),
           centerTitle: true,
         ),
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            FNUIText(text: '圆形进度条'),
+            FNUIText(text: 'Circular'),
             SizedBox(
               width: 150,
               height: 150,
@@ -33,7 +33,7 @@ class ProgressPage extends StatelessWidget {
                 fillColor: FNColors.background,
               )''',
             ),
-            FNUIText(text: '直线进度条'),
+            FNUIText(text: 'Linear'),
             SizedBox(
               width: 150,
               height: 150,

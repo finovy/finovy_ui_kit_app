@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fn_ui_kit/fn_ui_kit.dart';
@@ -19,14 +20,14 @@ class VerifyCodePage extends StatelessWidget {
     StreamController<ErrorAnimationType>? errorController;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('VerifyCode Page'),
+          title: const Text('VerifyCode'),
           centerTitle: true,
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              const FNUIText(text: "默认样式（重构后）"),
+              FNUIText(text: tr("Verify.general")),
               FNUIVerifyCodeInput(
                 length: 6,
                 cursorColor: FNColors.primary,
@@ -60,7 +61,7 @@ class VerifyCodePage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const FNUIText(text: "圆角矩形样式（重构后）"),
+              FNUIText(text: tr("Verify.square")),
               const SizedBox(
                 height: 10,
               ),
@@ -91,7 +92,7 @@ class VerifyCodePage extends StatelessWidget {
                 },
               ),
               const CodeHighlightCard(
-                code: '''FNUIVerifyCodeInput(
+                code: ''' FNUIVerifyCodeInput(
                 length: 6,
                 cursorColor: FNColors.primary,
                 keyboardType: TextInputType.number,

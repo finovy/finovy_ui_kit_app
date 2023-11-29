@@ -28,6 +28,16 @@ fn_ui_kit:
 <img src="screenshot/cn/pic002.png" alt="button" width="375"><br>
 <img src="screenshot/cn/pic003.png" alt="dialog" width="375">
 <img src="screenshot/cn/pic004.png" alt="place" width="375">
+<img src="screenshot/cn/pic005.png" alt="all" width="375">
+<img src="screenshot/cn/pic006.png" alt="button" width="375"><br>
+<img src="screenshot/cn/pic007.png" alt="dialog" width="375">
+<img src="screenshot/cn/pic008.png" alt="place" width="375">
+<img src="screenshot/cn/pic009.png" alt="all" width="375">
+<img src="screenshot/cn/pic010.png" alt="button" width="375"><br>
+<img src="screenshot/cn/pic011.png" alt="dialog" width="375">
+<img src="screenshot/cn/pic012.png" alt="place" width="375">
+<img src="screenshot/cn/pic013.png" alt="place" width="375">
+<img src="screenshot/cn/pic014.png" alt="place" width="375">
 </div>
 
 

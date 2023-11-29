@@ -127,7 +127,9 @@
     "loading": "加载状态",
     "shape": "按钮形状",
     "default": "默认按钮",
+    "secondary": "次要按钮",
     "primary": "主要按钮",
+    "link": "文字按钮",
     "success": "成功按钮",
     "danger": "危险按钮",
     "warning": "警告按钮",
@@ -147,7 +149,16 @@
     "customColor": "自定义颜色",
     "pure": "单色按钮",
     "gradient": "渐变色按钮",
-    "blockElement": "块级元素"
+    "blockElement": "块级元素",
+    "normal_status": "正常状态",
+    "loading_status": "加载状态",
+    "disabled_status": "禁用状态",
+    "custom_status": "自定义icon"
+  },
+  "Text": {
+      "description": "在Windows、macOS和Linux上，Flutter在Dart虚拟机中运行，该虚拟机具有即时编译执行引擎。在编写和调试应用时，Flutter使用即时编译功能进行“热重载”(Hot Reload)，可以将对源文件的修改注入正在运行的应用中。Flutter通过支持有状态的热重载来扩展此功能，在大多数情况下，对源代码的更改可以立即在运行的应用中反映出来，而无需重新启动或丢失任何状态",
+      "word_wrap": "自动换行",
+      "max_line": "限制行数"
   },
   "Cell": {
     "cell": "单元格",
@@ -224,8 +235,11 @@
     "positionTop": "顶部展示",
     "updateMessage": "动态更新提示",
     "positionBottom": "底部展示",
-    "customPosition": "自定义位置"
+    "customPosition": "自定义位置",
+    "longText": "超长文本",
+    "positionCenter": "居中展示"
   },
+
   "Switch": {
     "title": "标题",
     "confirm": "提醒",
@@ -334,7 +348,7 @@
     "formatWithDay": "DD 天 HH 时 mm 分 ss 秒"
   },
   "Grid": {
-    "text": "文字",
+    "text": "测试文字",
     "route": "页面导航",
     "gutter": "格子间距",
     "square": "正方形格子",
@@ -343,7 +357,10 @@
     "urlRoute": "URL 跳转",
     "vueRoute": "路由跳转",
     "showBadge": "徽标提示",
-    "horizontal": "内容横排"
+    "horizontal": "内容横排",
+    "common": "普通用法",
+    "gap": "有间隔",
+    "frameless": "无边框"
   },
   "Overlay": {
     "showOverlay": "显示遮罩层",
@@ -437,16 +454,18 @@
   },
   "Steps": {
     "nextStep": "下一步",
-    "step1": "买家下单",
-    "step2": "商家接单",
-    "step3": "买家提货",
-    "step4": "交易完成",
+    "step1": "开始申购",
+    "step2": "等待确认净值",
+    "step3": "确认成功",
+    "step4": "完成申购",
     "title2": "描述信息",
     "title3": "竖向步骤条",
     "status1": "【城市】物流状态1",
     "status2": "【城市】物流状态",
     "status3": "快件已发货",
-    "customStyle": "自定义样式"
+    "customStyle": "自定义样式",
+    "horizontal": "步骤条(横向)",
+    "vertical": "步骤条(纵向)"
   },
   "ActionBar": {
     "icon1": "客服",
@@ -690,11 +709,23 @@
   "Dialog": {
     "alert1": "提示弹窗",
     "alert2": "提示弹窗（无标题）",
-    "confirm": "确认弹窗",
+    "confirm": "确认",
+    "cancel": "取消",
+    "title": "标题",
     "beforeClose": "异步关闭",
     "roundButton": "圆角按钮样式",
     "componentCall": "组件调用",
-    "content": "代码是写出来给人看的，附带能在机器上运行"
+    "content": "代码是写出来给人看的，附带能在机器上运行",
+    "text1": "无标题、单按钮",
+    "text2": "有标题、单按钮",
+    "text3": "有标题、双按钮",
+    "text4": "有标题、有内容、双按钮、错误信息",
+    "text5": "有标题、有内容、双按钮、有图标",
+    "text6": "有标题、有内容、有多个action",
+    "text7": "有图标、有标题、有内容、有富文本",
+    "text8": "完全自定义",
+    "text9": "输入框对话框",
+    "text10": "密码输入框对话框"
   },
   "Notify": {
     "primary": "主要通知",
@@ -775,5 +806,17 @@
     "disabled": " 已被禁用",
     "matchByName": "通过名称匹配",
     "beforeChange": "异步切换"
+  },
+  "HighLight": {
+    "title": "示例代码",
+    "tip": "拷贝成功"
+  },
+  "Input": {
+    "general": "基本的用法",
+    "hint": "请输入内容"
+  },
+  "Verify": {
+    "general": "默认样式",
+    "square": "矩形边框"
   }
 }

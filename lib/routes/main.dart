@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fn_ui_kit/fn_ui_kit.dart';
 
 import './01_basic_comp.dart';
 import './02_form_comp.dart';
 import './03_feedback_comp.dart';
-import './04_action_comp.dart';
 import './05_navigation_comp.dart';
 import './06_business_comp.dart';
 import './_modals.dart';
@@ -22,8 +22,6 @@ class CompRouter {
       CompRoute.group('BasicComponents', routes: basicCompRoutes),
       CompRoute.group('FeedbackComponents', routes: feedbackCompRoutes),
       CompRoute.group('FormComponents', routes: formCompRoutes),
-
-      // CompRoute.group('ActionComponents', routes: actionCompRoutes),
       CompRoute.group('NavigationComponents', routes: navigationCompRoutes),
       CompRoute.group('BusinessComponents', routes: businessCompRoutes),
     ];
@@ -40,6 +38,10 @@ class CompRouter {
     final CompRoute? route = pathMap[settings.name];
     if (route == null) {
       return CompRouter.fallbackRoute;
+    }
+    if (route.future == null) {
+      return MaterialPageRoute<dynamic>(
+          builder: (BuildContext context) => route.component!(context));
     }
     return MaterialPageRoute<dynamic>(
       builder: (BuildContext context) => FutureBuilder<void>(

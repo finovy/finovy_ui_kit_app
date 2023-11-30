@@ -6,7 +6,7 @@ import './_modals.dart';
 import '../business_pages/01_event_page.dart' deferred as event_container_page;
 import '../business_pages/02_picker_page.dart' deferred as picker_date_page;
 import '../business_pages/03_holder_page.dart' deferred as place_holder_page;
-import '../business_pages/04_verifycode_page.dart' deferred as verify_code_page;
+import '../business_pages/04_verifycode_page.dart'  as verify_code_page;
 
 List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
@@ -30,7 +30,7 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'VerifyCode',
     path: '/verifyCode',
-    future: () => verify_code_page.loadLibrary(),
+    future: null,
     component: (BuildContext context) => verify_code_page.VerifyCodePage(),
   ),
 ];
